@@ -22,45 +22,46 @@ int main()
         do {
             std::cout << "введите номер месяца: ";
             std::cin >> n;
+            months m = static_cast<months>(n);
             if (n > 12 || n < 0) {
                 std::cout << "Неправильный номер!" << std::endl;
             }
             else {
-                switch (n) {
-                case static_cast<int>(months::Jan):
+                switch (m) {
+                case months::Jan:
                     std::cout << "Январь" << std::endl;
                     break;
-                case static_cast<int>(months::Feb):
+                case months::Feb:
                     std::cout << "Февраль" << std::endl;
                     break;
-                case static_cast<int>(months::Marth):
+                case months::Marth:
                     std::cout << "Март" << std::endl;
                     break;
-                case static_cast<int>(months::April):
+                case months::April:
                     std::cout << "Апрель" << std::endl;
                     break;
-                case static_cast<int>(months::May):
+                case months::May:
                     std::cout << "Май" << std::endl;
                     break;
-                case static_cast<int>(months::June):
+                case months::June:
                     std::cout << "Июнь" << std::endl;
                     break;
-                case static_cast<int>(months::Jule):
+                case months::Jule:
                     std::cout << "Июль" << std::endl;
                     break;
-                case static_cast<int>(months::Aug):
+                case months::Aug:
                     std::cout << "Август" << std::endl;
                     break;
-                case static_cast<int>(months::Sep):
+                case months::Sep:
                     std::cout << "Сентябрь" << std::endl;
                     break;
-                case static_cast<int>(months::Oct):
+                case months::Oct:
                     std::cout << "Октябрь" << std::endl;
                     break;
-                case static_cast<int>(months::Nov):
+                case months::Nov:
                     std::cout << "Ноябрь" << std::endl;
                     break;
-                case static_cast<int>(months::Dec):
+                case months::Dec:
                     std::cout << "Декабрь" << std::endl;
                     break;
                 }

@@ -28,5 +28,7 @@ int main()
     std::cin >> person.NewBalance;
     changeBalance(person);
     std::cout << "Ваш счёт: " << person.name << ", " << person.nomer << ", " << person.Balance;
+
+    return 0;
 }
 
