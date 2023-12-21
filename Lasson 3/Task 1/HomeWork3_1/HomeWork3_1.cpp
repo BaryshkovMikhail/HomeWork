@@ -34,14 +34,12 @@ public:
     }
     bool set_num1(double num1) {
         if (this->num1 == 0)
-
             return false;
         else
             return true;
     }
     bool set_num2(double num2) {
         if (this->num2 == 0)
-
             return false;
         else
             return true;
