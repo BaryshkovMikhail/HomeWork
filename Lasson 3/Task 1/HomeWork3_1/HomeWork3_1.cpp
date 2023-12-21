@@ -1,20 +1,81 @@
-﻿// HomeWork3_1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
+#include<windows.h>
 
-#include <iostream>
+class Calculator
+{
+public:
+    int num1 = 0;
+    int num2 = 0;
+    double result = 0.0;
+
+    double add(const int& num1, const int& num2) {
+        result = num1 + num2;
+        return result;
+    }
+    double subtract_1_2(const int& num1, const int& num2) {
+        result = num1 - num2;
+        return result;
+    }
+    double subtract_2_1(const int& num1, const int& num2) {
+        result = num2 - num1;
+        return result;
+    }
+    double multiply(const int& num1, const int& num2) {
+        result = num1 * num2;
+        return result;
+    }
+    double divide_1_2(const double& num1, const double& num2) {
+        result = num1 / num2;
+        return result;
+    }
+    double divide_2_1(const double& num1, const double& num2) {
+        result = num2 / num1;
+        return result;
+    }
+    bool set_num1(double num1) {
+        if (this->num1 == 0)
+            return false;
+        else
+            return true;
+    }
+    bool set_num2(double num2) {
+        if (this->num2 == 0)
+            return false;
+        else
+            return true;
+    }
+};
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    Calculator calc;
+    do {
+        std::cout << "Введите num1:";
+        std::cin >> calc.num1;
+        if (!calc.set_num1(calc.num1)) {
+            std::cout << "Неверный ввод!" << std::endl;
+        }
+    } while (!calc.set_num1(calc.num1));
+
+    do {
+        std::cout << "Введите num2:";
+        std::cin >> calc.num2;
+        if (!calc.set_num2(calc.num2)) {
+            std::cout << "Неверный ввод!" << std::endl;
+        }
+    } while (!calc.set_num2(calc.num2));
+
+    std::cout << "num1 + num2 = " << calc.add(calc.num1, calc.num2) << std::endl;
+    std::cout << "num1 - num2 = " << calc.subtract_1_2(calc.num1, calc.num2) << std::endl;
+    std::cout << "num2 - num1 = " << calc.subtract_2_1(calc.num1, calc.num2) << std::endl;
+    std::cout << "num1 * num2 = " << calc.multiply(calc.num1, calc.num2) << std::endl;
+    std::cout << "num1 / num2 = " << calc.divide_1_2(calc.num1, calc.num2) << std::endl;
+    std::cout << "num2 / num1 = " << calc.divide_2_1(calc.num1, calc.num2) << std::endl;
+    
+
+    return 0;
 }
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
