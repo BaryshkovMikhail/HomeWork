@@ -4,23 +4,23 @@
 class Calculator
 {
 public:
-    int num1 = 0;
-    int num2 = 0;
+    double num1 = 0;
+    double num2 = 0;
     double result = 0.0;
 
-    double add(const int& num1, const int& num2) {
+    double add(const double& num1, const double& num2) {
         result = num1 + num2;
         return result;
     }
-    double subtract_1_2(const int& num1, const int& num2) {
+    double subtract_1_2(const double& num1, const double& num2) {
         result = num1 - num2;
         return result;
     }
-    double subtract_2_1(const int& num1, const int& num2) {
+    double subtract_2_1(const double& num1, const double& num2) {
         result = num2 - num1;
         return result;
     }
-    double multiply(const int& num1, const int& num2) {
+    double multiply(const double& num1, const double& num2) {
         result = num1 * num2;
         return result;
     }
@@ -33,16 +33,20 @@ public:
         return result;
     }
     bool set_num1(double num1) {
-        if (this->num1 == 0)
-            return false;
-        else
+        this->num1 = num1;
+        if (num1 != 0) {
             return true;
+        }
+        else 
+            return false;
     }
     bool set_num2(double num2) {
-        if (this->num2 == 0)
-            return false;
-        else
+        this->num2 = num2;
+        if (num2 != 0) {
             return true;
+        }
+        else
+            return false;
     }
 };
 
