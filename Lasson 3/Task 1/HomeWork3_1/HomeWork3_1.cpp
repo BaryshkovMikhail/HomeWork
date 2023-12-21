@@ -4,8 +4,8 @@
 class Calculator
 {
 public:
-    double num1 = 0;
-    double num2 = 0;
+    double num1 = 0.0;
+    double num2 = 0.0;
     double result = 0.0;
 
     double add(const double& num1, const double& num2) {
