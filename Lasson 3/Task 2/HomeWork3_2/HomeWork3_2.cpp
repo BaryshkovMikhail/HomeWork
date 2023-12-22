@@ -27,9 +27,7 @@ public:
         }
         return num;
     }
-    Counter(int num) {
-        this->num = num;
-    }
+    Counter(int num): num(num) {}
 };
 
 int main()
