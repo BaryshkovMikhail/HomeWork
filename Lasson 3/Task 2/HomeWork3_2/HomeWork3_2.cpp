@@ -45,8 +45,18 @@ int main()
         std::cin >> q;
         if (q == "да") {
             std::cout << "Введите начальное значение счётчика:";
-            std::cin >> num1;
-            
+            do {
+                std::cin >> num1;
+                if (!(std::cin >> num1)) {
+                    std::cout << "Вы ввели не кореектные данные" << std::endl;
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    std::cout << "Введите начальное значение счётчика:";
+                }
+            }
+            while (!(std::cin >> num1));
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
         if (q == "нет") {
             std::cout << "Начатльное значение счетчика = 1" << std::endl;
