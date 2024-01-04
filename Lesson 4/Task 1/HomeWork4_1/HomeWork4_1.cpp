@@ -32,6 +32,7 @@ int main()
     SetConsoleOutputCP(1251);
     std::ifstream file("in.txt");
     int rows;
+    
     std::string city;
     std::string street;
     unsigned int house;
@@ -43,7 +44,7 @@ int main()
         bool fileIsOver;
         fileIsOver = file.eof();
         file >> rows;
-        std::string arr[3];
+        std::string* arr = new std::string[rows];
         std::ofstream outFile("out.txt");
         if (outFile.is_open()) {
             outFile << rows << std::endl;
@@ -60,20 +61,24 @@ int main()
                 file >> house;
                 file >> kvartira;
                 Adress adress(city, street, house, kvartira);
-                arr[i] = adress.get_output_address();
-                outFile << adress.get_output_address() << std::endl;
-               
+                arr[i] = adress.get_output_address();  
             }
             
             fileIsOver = file.eof();
         }
+        for (int i = 0; i < rows; i++)
+        {
+            outFile << arr[i] << std::endl;
+        }
         outFile.close();
+        delete[]arr;
     }
     else
     {
         std::cout << "Не получилось открыть файл!" << std::endl;
     }
     file.close();
+    
     
     return 0;
 }
