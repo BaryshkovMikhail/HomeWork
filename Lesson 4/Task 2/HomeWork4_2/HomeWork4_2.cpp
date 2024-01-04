@@ -18,15 +18,7 @@ public:
     std::string get_city() {
         return city;
     }
-  /*  std::string get_steet() {
-       return street;
-    }
-    unsigned int get_house() {
-        return house;
-    }
-    unsigned int get_kvartira() {
-        return kvartira;
-    }*/
+ 
     void set_adress(std::string city, std::string street, unsigned int house, unsigned int kvartira) {
         this->city = city;
         this->street = street;
