@@ -61,12 +61,13 @@ int main()
         bool fileIsOver;
         fileIsOver = file.eof();
         file >> rows;
+        std::string* arr = new std::string[rows];
         std::ofstream outFile("out.txt");
         if (outFile.is_open()) {
             outFile << rows << std::endl;
         }
         else {
-            std::cout << "Не получилось открыть файл!" << std::endl;
+            std::cout << "Не получилось записать файл!" << std::endl;
         }
         while (!fileIsOver)
         {
@@ -78,8 +79,6 @@ int main()
                 file >> kvartira;
                 Adress adress(city, street, house, kvartira);
                 arr[i] = adress.get_output_address();
-               // outFile << adress.get_output_address() << std::endl;
-
             }
 
             fileIsOver = file.eof();
@@ -91,6 +90,7 @@ int main()
 
         }
         outFile.close();
+        delete[]arr;
     }
     else
     {
