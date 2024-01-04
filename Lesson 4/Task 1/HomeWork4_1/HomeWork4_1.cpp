@@ -7,22 +7,33 @@
 
 class Adress
 {
-    private:
-        std::string city;
-        std::string street;
-        unsigned int house;
-        unsigned int kvartira;
-    public:
+private:
+    std::string city;
+    std::string street;
+    unsigned int house = 0;
+    unsigned int kvartira = 0;
+    std::ostringstream full_adress;
+public:
 
-        std::string get_output_address() {
-            std::ostringstream new_adress;
-            new_adress << city << "," << street << "," << house << "," << kvartira;
-            return new_adress.str();
-        }
-        
-        Adress(std::string city, std::string street, unsigned int house, unsigned int kvartira)
-            :city(city), street(street), house(house), kvartira(kvartira) {}
+    void set_adress(std::string city, std::string street, unsigned int house, unsigned int kvartira) {
+        this->city = city;
+        this->street = street;
+        this->house = house;
+        this->kvartira = kvartira;
+    }
+
+
+    std::string get_output_address() {
+        full_adress << city << ", " << street << ", " << house << ", " << kvartira;
+        return full_adress.str();
+    }
+
+    Adress() {}
+    Adress(std::string city, std::string street, unsigned int house, unsigned int kvartira)
+        :city(city), street(street), house(house), kvartira(kvartira) {}
+
 };
+
 
 
 int main()
@@ -32,54 +43,53 @@ int main()
     SetConsoleOutputCP(1251);
     std::ifstream file("in.txt");
     int rows;
-    
     std::string city;
     std::string street;
     unsigned int house;
     unsigned int kvartira;
-    
-    
+    Adress adress("Не известен", "Не известена", 0, 0);
+
+
     if (file.is_open())
     {
         bool fileIsOver;
         fileIsOver = file.eof();
         file >> rows;
-        std::string* arr = new std::string[rows];
-        std::ofstream outFile("out.txt");
-        if (outFile.is_open()) {
-            outFile << rows << std::endl;
-        }
-        else{
-            std::cout << "Не получилось открыть файл!" << std::endl;
-        }
+        Adress* mas = new Adress[rows];
+
         while (!fileIsOver)
         {
             for (int i = 0; i < rows; i++)
             {
-                file >> city;
-                file >> street;
-                file >> house;
-                file >> kvartira;
-                Adress adress(city, street, house, kvartira);
-                arr[i] = adress.get_output_address();  
+                file >> city >> street >> house >> kvartira;
+
+                mas[i].set_adress(city, street, house, kvartira);
             }
-            
+
             fileIsOver = file.eof();
+        }
+       
+        std::ofstream outFile("out.txt");
+        if (outFile.is_open()) {
+            outFile << rows << std::endl;
+        }
+        else {
+            std::cout << "Не получилось записать файл!" << std::endl;
         }
         for (int i = 0; i < rows; i++)
         {
-            outFile << arr[i] << std::endl;
+            outFile << mas[i].get_output_address() << std::endl;
+
         }
         outFile.close();
-        delete[]arr;
+        delete[]mas;
     }
     else
     {
         std::cout << "Не получилось открыть файл!" << std::endl;
     }
     file.close();
-    
-    
+
     return 0;
 }
 
