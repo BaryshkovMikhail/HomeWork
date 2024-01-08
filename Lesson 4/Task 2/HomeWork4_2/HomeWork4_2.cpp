@@ -34,7 +34,6 @@ public:
         std::swap(A.kvartira, B.kvartira);
     }
 
-
     std::string get_output_address() {
         full_adress << city << ", " << street << ", " << house << ", " << kvartira;
         return full_adress.str();
