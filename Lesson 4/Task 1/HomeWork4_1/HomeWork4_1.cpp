@@ -15,13 +15,13 @@ private:
     std::ostringstream full_adress;
 public:
 
-    void set_adress(std::string city, std::string street, unsigned int house, unsigned int kvartira) {
-        this->city = city;
-        this->street = street;
-        this->house = house;
-        this->kvartira = kvartira;
+    Adress& operator=(const Adress& other) {
+        city = other.city;
+        street = other.street;
+        house = other.house;
+        kvartira = other.kvartira;
+        return *this;
     }
-
 
     std::string get_output_address() {
         full_adress << city << ", " << street << ", " << house << ", " << kvartira;
@@ -47,7 +47,7 @@ int main()
     std::string street;
     unsigned int house;
     unsigned int kvartira;
-    Adress adress("Не известен", "Не известена", 0, 0);
+   
 
 
     if (file.is_open())
@@ -62,8 +62,9 @@ int main()
             for (int i = 0; i < rows; i++)
             {
                 file >> city >> street >> house >> kvartira;
-
-                mas[i].set_adress(city, street, house, kvartira);
+                Adress adress(city, street, house, kvartira);
+                mas[i] = adress;
+                fileIsOver = file.eof();
             }
 
             fileIsOver = file.eof();
