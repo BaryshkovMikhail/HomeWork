@@ -82,7 +82,14 @@ public:
         std::cout << "A=" << get_A() << " B=" << get_B() << " C=" << get_C() << " D=" << get_D() << std::endl;
         std::cout << std::endl;
     }
-    Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) :a(a), b(b), c(c), d(d), A(A), B(B), C(C), D(D) { name = "Прямоугольник: "; };
+    Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) :a(a), b(b), c(c), d(d), A(A), B(B), C(C), D(D) { name = "Четырёхугольник: "; };
+};
+
+class Quadrangle_AB : public Quadrangle {
+public:
+    Quadrangle_AB(int a, int b) : Quadrangle(a, b, a, b, 90, 90, 90, 90) {
+        name = "Прямоугольник:";
+    }
 };
 
 class Quadrangle_A : public Quadrangle {
@@ -130,6 +137,10 @@ int main()
     Quadrangle quadrangle(10, 20, 30, 40, 50, 60, 70, 80);
     Quadrangle* new_quadrangle = &quadrangle;
     new_quadrangle->print_info();
+
+    Quadrangle_AB quadrangle_AB(10,20);
+    Quadrangle* new_quadrangle_AB = &quadrangle_AB;
+    new_quadrangle_AB->print_info();
 
     Quadrangle_A quadrangle_A(20);
     Quadrangle* new_quadrangle_A = &quadrangle_A;
