@@ -13,14 +13,14 @@ protected:
     int C = 0;
 
 public:
-    int get_a() { return a; };
-    int get_b() { return b; };
-    int get_c() { return c; };
-    int get_A() { return A; };
-    int get_B() { return B; };
-    int get_C() { return C; };
+    int get_a() const { return a; };
+    int get_b() const { return b; };
+    int get_c() const { return c; };
+    int get_A() const { return A; };
+    int get_B() const { return B; };
+    int get_C() const { return C; };
 
-    void print_info() {
+    void print_info() const {
         std::cout << name << std::endl;
         std::cout << "Стороны: ";
         std::cout << "a=" << get_a() << " b=" << get_b() << " c=" << get_c() << std::endl;
@@ -65,16 +65,16 @@ protected:
     int D = 0;
 
 public:
-    int get_a() { return a; };
-    int get_b() { return b; };
-    int get_c() { return c; };
-    int get_d() { return d; };
-    int get_A() { return A; };
-    int get_B() { return B; };
-    int get_C() { return C; };
-    int get_D() { return D; };
+    int get_a() const { return a; };
+    int get_b() const { return b; };
+    int get_c() const { return c; };
+    int get_d() const { return d; };
+    int get_A() const { return A; };
+    int get_B() const { return B; };
+    int get_C() const { return C; };
+    int get_D() const { return D; };
 
-    void print_info() {
+    void print_info() const {
         std::cout << name << std::endl;
         std::cout << "Стороны: ";
         std::cout << "a=" << get_a() << " b=" << get_b() << " c=" << get_c() <<" d=" <<get_d() << std::endl;
@@ -118,7 +118,7 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     
-    Triangle triangle(10, 20, 30, 50, 60, 80);
+    Triangle triangle(10, 20, 30, 50, 60, 70);
     Triangle* new_triangle = &triangle;
     new_triangle->print_info();
 
