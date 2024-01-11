@@ -7,6 +7,14 @@ protected:
     std::string name = "Фигура";
     bool check = false;
     int sides = 0;
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    int d = 0;
+    int A = 0;
+    int B = 0;
+    int C = 0;
+    int D = 0;
 
     virtual bool Check() 
     {
@@ -15,6 +23,14 @@ protected:
     };
 public:
     std::string get_name() { return name; }
+    int get_a() const { return a; };
+    int get_b() const { return b; };
+    int get_c() const { return c; };
+    int get_d() const { return d; };
+    int get_A() const { return A; };
+    int get_B() const { return B; };
+    int get_C() const { return C; };
+    int get_D() const { return D; };
 
     virtual void print_info()
     {
@@ -34,14 +50,7 @@ public:
 
 
 class Triangle : public Figure {
-protected:
-    int a = 0;
-    int b = 0;
-    int c = 0;
-    int A = 0;
-    int B = 0;
-    int C = 0;
-
+protected:   
     bool Check() override {
         if ((A + B + C) == 180) {
             return true;
@@ -52,22 +61,21 @@ protected:
     }
 
 public:
-    int  get_a() const { return a; };
-    int  get_b() const { return b; };
-    int  get_c() const { return c; };
-    int  get_A() const { return A; };
-    int  get_B() const { return B; };
-    int  get_C() const { return C; };
-
     void print_info() override {
         Figure::print_info();
         std::cout << "Стороны: a=" << get_a() << " b=" << get_b() << " c=" << get_c() << std::endl;
         std::cout << "Углы: A=" << get_A() << " B=" << get_B() << " C=" << get_C() << std::endl;
     }
-    Triangle(int a, int b, int c, int A, int B, int C) :a(a), b(b), c(c), A(A), B(B), C(C) {
+    Triangle(int a, int b, int c, int A, int B, int C) {
         name = "Треугольник";
         sides = 3;
         check = Check();
+        this->a = a;
+        this->b = b;
+        this->c = c;
+        this->A = A;
+        this->B = B;
+        this->C = C;
     };
 };
 
@@ -108,14 +116,7 @@ public:
 
 class Quadrangle : public Figure {
 protected:
-    int a = 0;
-    int b = 0;
-    int c = 0;
-    int d = 0;
-    int A = 0;
-    int B = 0;
-    int C = 0;
-    int D = 0;
+    
 
     virtual bool Check() 
     {
@@ -124,22 +125,23 @@ protected:
     };
 
 public:
-    int get_a() const { return a; };
-    int get_b() const { return b; };
-    int get_c() const { return c; };
-    int get_d() const { return d; };
-    int get_A() const { return A; };
-    int get_B() const { return B; };
-    int get_C() const { return C; };
-    int get_D() const { return D; };
-
+    
     void print_info() override {
         Figure::print_info();
         std::cout << "Стороны: a=" << get_a() << " b=" << get_b() << " c=" << get_c() << " d=" << get_d() << std::endl;
         std::cout << "Углы: A=" << get_A() << " B=" << get_B() << " C=" << get_C() << " D=" << get_D() << std::endl;
     }
-    Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) :a(a), b(b), c(c), d(d), A(A), B(B), C(C), D(D) {
-        name = "Четырёхугольник "; sides = 4;
+    Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) {
+        name = "Четырёхугольник ";
+        sides = 4;
+        this->a = a;
+        this->b = b;
+        this->c = c;
+        this->d = d;
+        this->A = A;
+        this->B = B;
+        this->C = C;
+        this->D = D;
     };
 };
 
