@@ -11,7 +11,6 @@ int main() {
     double firstNumber = 0;
     double secondNumber = 0;
     int operationSelection = 0;
-    std::string nameOfOperation;
     bool checkingValue = false;
 
     std::cout << "Введите первое число: ";
@@ -39,35 +38,26 @@ int main() {
         }
     } while (!checkingValue);
 
-    switch (operationSelection)
-    {
-    case(1):{nameOfOperation = "плюс";break;}
-    case(2):{nameOfOperation = "минус";break;}
-    case(3):{nameOfOperation = "умножить";break;}
-    case(4):{nameOfOperation = "разделить";break;}
-    case(5):{nameOfOperation = "в степени";break;}
-    };
-    std::cout << firstNumber << " " << nameOfOperation << " " << secondNumber << " = ";
 
     if (operationSelection == 1)
     {
-        std::cout << plus(firstNumber, secondNumber);
+        std::cout << firstNumber << " " << "плюс" << " " << secondNumber << " = " << plus(firstNumber, secondNumber);
     }
     else if (operationSelection == 2)
     {
-        std::cout << minus(firstNumber, secondNumber);
+        std::cout << firstNumber << " " << "минус" << " " << secondNumber << " = " << minus(firstNumber, secondNumber);
     }
     else if (operationSelection == 3)
     {
-        std::cout << multiplication(firstNumber, secondNumber);
+        std::cout << firstNumber << " " << "умножение" << " " << secondNumber << " = " << multiplication(firstNumber, secondNumber);
     }
     else if (operationSelection == 4)
     {
-        std::cout << delenie(firstNumber, secondNumber);
+        std::cout << firstNumber << " " << "деление" << " " << secondNumber << " = " << delenie(firstNumber, secondNumber);
     }
     else
     {
-        std::cout << stepen(firstNumber, secondNumber);
+        std::cout << firstNumber << " " << "в степени" << " " << secondNumber << " = " << stepen(firstNumber, secondNumber);
     };
 
 
