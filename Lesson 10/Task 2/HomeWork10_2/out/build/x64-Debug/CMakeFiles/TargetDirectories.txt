@@ -1,0 +1,3 @@
+C:/Users/BaryshkovMA/Documents/HomeWork/Lesson 10/Task 2/HomeWork10_2/out/build/x64-Debug/CMakeFiles/HomeWork10_02.dir
+C:/Users/BaryshkovMA/Documents/HomeWork/Lesson 10/Task 2/HomeWork10_2/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/BaryshkovMA/Documents/HomeWork/Lesson 10/Task 2/HomeWork10_2/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

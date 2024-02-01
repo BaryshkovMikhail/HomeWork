@@ -1,0 +1,16 @@
+# ninja log v5
+113	643	7285264459919382	CMakeFiles/HomeWork10_02.dir/Quadrangle_Romb.cpp.obj	e3df541fc4f59a26
+5	1523	7285264468871333	CMakeFiles/HomeWork10_02.dir/HomeWork10_2.cpp.obj	c8870e8ffb2ac1f5
+84	673	7285264460300799	CMakeFiles/HomeWork10_02.dir/Quadrangle_AB.cpp.obj	41e4515a0a847512
+99	700	7285264460523350	CMakeFiles/HomeWork10_02.dir/Quadrangle_ab_AB.cpp.obj	e8964d75734d5f85
+69	711	7285264460710176	CMakeFiles/HomeWork10_02.dir/Quadrangle_A.cpp.obj	840b7db6327624b6
+29	699	7285264460310795	CMakeFiles/HomeWork10_02.dir/Figure.cpp.obj	d2633cec08c59c19
+56	713	7285264460720176	CMakeFiles/HomeWork10_02.dir/Quadrangle.cpp.obj	f2341a47cc4200c8
+144	699	7285264460513353	CMakeFiles/HomeWork10_02.dir/Triangle_90.cpp.obj	ec927d8ec30ae855
+129	753	7285264461152633	CMakeFiles/HomeWork10_02.dir/Triangle.cpp.obj	dd7a82241c7f1f01
+41	1059	7285264464180489	CMakeFiles/HomeWork10_02.dir/print_info.cpp.obj	d437fba9c4c8d1ac
+674	1106	7285264464683446	CMakeFiles/HomeWork10_02.dir/Triangle_ABC.cpp.obj	fdb5c4d63c355d34
+645	1134	7285264464908533	CMakeFiles/HomeWork10_02.dir/Triangle_AB.cpp.obj	b0c8dea731590f6b
+1523	1959	7285264473022093	HomeWork10_02.exe	4c540a92b4ebe52c
+2	670	7285266050369707	CMakeFiles/HomeWork10_02.dir/HomeWork10_2.cpp.obj	c8870e8ffb2ac1f5
+670	892	7285266052133055	HomeWork10_02.exe	4c540a92b4ebe52c
