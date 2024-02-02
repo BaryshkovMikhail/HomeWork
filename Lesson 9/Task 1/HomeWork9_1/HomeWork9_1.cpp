@@ -14,7 +14,7 @@ public:
 	}
 
 	bool operator==(Fraction other) {
-		if ((numerator_ / denominator_) == (other.numerator_ / other.denominator_)) {
+		if ((numerator_ * other.denominator_) == (other.numerator_ * denominator_)) {
 			return 1;
 		}
 		else {
@@ -23,7 +23,7 @@ public:
 	}
 
 	bool operator!=(Fraction other) {
-		if ((numerator_ / denominator_) != (other.numerator_ / other.denominator_)) {
+		if ((numerator_ * other.denominator_) != (other.numerator_ * denominator_)) {
 			return 1;
 		}
 		else {
@@ -31,7 +31,7 @@ public:
 		}
 	}
 	bool operator>(Fraction other) {
-		if ((numerator_ / denominator_) > (other.numerator_ / other.denominator_)) {
+		if ((numerator_ * other.denominator_) > (other.numerator_ * denominator_)) {
 			return 1;
 		}
 		else {
@@ -39,7 +39,7 @@ public:
 		}
 	}
 	bool operator<(Fraction other) {
-		if ((numerator_ / denominator_) < (other.numerator_ / other.denominator_)) {
+		if ((numerator_ * other.denominator_) < (other.numerator_ * denominator_)) {
 			return 1;
 		}
 		else {
@@ -47,7 +47,7 @@ public:
 		}
 	}
 	bool operator>=(Fraction other) {
-		if ((numerator_ / denominator_) >= (other.numerator_ / other.denominator_)) {
+		if ((numerator_ * other.denominator_) >= (other.numerator_ * denominator_)) {
 			return 1;
 		}
 		else {
@@ -55,7 +55,7 @@ public:
 		}
 	}
 	bool operator<=(Fraction other) {
-		if ((numerator_ / denominator_) <= (other.numerator_ / other.denominator_)) {
+		if ((numerator_ * other.denominator_) <= (other.numerator_ * denominator_)) {
 			return 1;
 		}
 		else {
