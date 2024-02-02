@@ -2,6 +2,12 @@
 
 x64/
 
+CMakeFiles/
+
+.cmake/
+
+Testing/
+
 
 # Prerequisites
 *.d
@@ -19,7 +25,7 @@ x64/
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
+#*.dll
 
 # Fortran module files
 *.mod
@@ -29,13 +35,22 @@ x64/
 *.lai
 *.la
 *.a
-*.lib
+#*.lib
 
 # Executables
-*.exe
+#*.exe
 *.out
 *.app
 
 .vs/
 
 x64/
+
+.ninja_deps
+.ninja_log
+build.ninja
+cmake_install.cmake
+CMakeCache.txt
+*.ilk
+*.pdb
+VSInheritEnvironments.txt
