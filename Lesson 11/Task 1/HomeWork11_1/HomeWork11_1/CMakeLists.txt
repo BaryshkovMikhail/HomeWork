@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(HomeWork11_1)
+include_directories(StaticLib HomeWork11_1)
+add_executable(HomeWork11_1 HomeWork11_1.cpp)
+target_link_libraries(HomeWork11_1 My_Staticlib)
