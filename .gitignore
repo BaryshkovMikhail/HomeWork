@@ -8,6 +8,9 @@ CMakeFiles/
 
 Testing/
 
+out/
+
+Debug/
 
 # Prerequisites
 *.d
@@ -35,22 +38,11 @@ Testing/
 *.lai
 *.la
 *.a
-#*.lib
+*.lib
 
 # Executables
-#*.exe
+*.exe
 *.out
 *.app
 
-.vs/
 
-x64/
-
-.ninja_deps
-.ninja_log
-build.ninja
-cmake_install.cmake
-CMakeCache.txt
-*.ilk
-*.pdb
-VSInheritEnvironments.txt
