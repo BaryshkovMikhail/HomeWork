@@ -9,9 +9,9 @@
 
 namespace lib
 {
-	class Leaver
+	class LEAVERDYNAMICLIB_API Leaver
 	{
 	public:
-		LEAVERDYNAMICLIB_API std::string leave(std::string name);
+		 std::string leave(std::string name);
 	};
 }
