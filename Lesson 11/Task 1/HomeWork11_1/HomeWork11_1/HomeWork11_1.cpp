@@ -19,7 +19,7 @@ int main()
     lib::Greeter z;
     srtoka = z.greet(name);
 
-    std::cout << srtoka;
+    std::cout << srtoka << std::endl;
 
     system("pause");
 
